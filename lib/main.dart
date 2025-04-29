@@ -13,12 +13,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'TEst app',
+      title: 'Test App', // Changed title from 'TEst app' to 'Test App'
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Text("Sss"),
+      // Changed home widget to a Scaffold for better structure
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Welcome to Test App"), // Added title to AppBar
+        ),
+        body: Center(
+          child: const Text(
+            "Hello, World!", 
+            style: TextStyle(fontSize: 24), 
+          ),
+        ),
+      ),
     );
   }
 }
